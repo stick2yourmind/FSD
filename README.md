@@ -16,6 +16,11 @@ REV 2.0:
  React module:
       submodule 2 - exercise 2
       React app working without img and api
+REV 2.1:
+ React module:
+      submodule 2 - exercise 2
+      React app working with img but API
+
 
 
 
