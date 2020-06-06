@@ -1,3 +1,5 @@
+# To untrack node_module files:
+# git rm -r --cached 01_React/modulo_2/node_modules
 # FSD
 Full stack developer repository
 
@@ -20,6 +22,7 @@ REV 2.1:
  React module:
       submodule 2 - exercise 2
       React app working with img but API
+
 
 
 
