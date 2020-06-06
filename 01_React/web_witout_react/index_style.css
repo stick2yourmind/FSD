@@ -71,6 +71,9 @@ img{
     margin: auto;
     position: relative;
 }
+li:hover{
+    text-decoration: underline;
+}
 .buy_input{
     display: block;
     border-radius: 50px;
@@ -80,6 +83,9 @@ img{
     border-width: 0;
     width: 60px;
     margin: auto auto 5px auto;
+}
+.buy_input:hover{
+    font-weight: bold;
 }
 .buy_span{
     display: block;
