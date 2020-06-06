@@ -10,7 +10,7 @@ class Home extends Component{
             buyMessage: "Presione el boton comprar para finalizar el pedido",
             sale_item: [{
                 id:0,
-                item_img:"img",
+                item_img:"./img/0/image.jpg",
                 item_mark:"AMD",
                 item_model:"Ryzen 7 3600X",
                 item_price:"$ 219.99",

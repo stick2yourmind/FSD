@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import "./Item.css"
 const IMG = (imgName) => {
-    return require(`./img/0/${imgName}`)
+    return require(`${imgName}`)
 };
 
 class Item extends Component{
@@ -11,10 +11,9 @@ class Item extends Component{
     render(){
         return(
             <Fragment>
-
                 <div className="table">
                     <div className="tr">
-                        <div className="td"><img src={IMG("image.jpg")} alt="Microprocessor"/></div>
+                        <div className="td"><img src={require( `${ this.props.sale_item[0].item_img }` )} alt="Microprocessor"/></div>
                     </div>
                     <div className="tr">
                         <div className="td">
