@@ -22,7 +22,10 @@ REV 2.1:
  React module:
       submodule 2 - exercise 2
       React app working with img but API
-
+REV 2.2:
+ React module:
+      submodule 2 - exercise 2
+      React app working with img but API. With three items loaded with json
 
 
 

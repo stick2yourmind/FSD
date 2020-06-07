@@ -13,16 +13,16 @@ class Item extends Component{
             <Fragment>
                 <div className="table">
                     <div className="tr">
-                        <div className="td"><img src={require( `${ this.props.sale_item[0].item_img }` )} alt="Microprocessor"/></div>
+                        <div className="td"><img src={require( `${ this.props.sale_item.item_img }` )} alt="Microprocessor"/></div>
                     </div>
                     <div className="tr">
                         <div className="td">
                             <ul>
-                                <li>Marca: <span id="item_mark">{this.props.sale_item[0].item_mark}</span></li>
-                                <li>Modelo: <span id="item_model">{this.props.sale_item[0].item_model}</span></li>
-                                <li>Precio: <span id="item_price">{this.props.sale_item[0].item_price}</span></li>
-                                <li>SKU: <span id="item_sku">{this.props.sale_item[0].item_sku}</span></li>
-                                <li>Cantidad disponible: <span id="item_available">{this.props.sale_item[0].item_available}</span></li>
+                                <li>Marca: <span id="item_mark">{this.props.sale_item.item_mark}</span></li>
+                                <li>Modelo: <span id="item_model">{this.props.sale_item.item_model}</span></li>
+                                <li>Precio: <span id="item_price">{this.props.sale_item.item_price}</span></li>
+                                <li>SKU: <span id="item_sku">{this.props.sale_item.item_sku}</span></li>
+                                <li>Cantidad disponible: <span id="item_available">{this.props.sale_item.item_available}</span></li>
                             </ul>
                         </div>
                     </div>

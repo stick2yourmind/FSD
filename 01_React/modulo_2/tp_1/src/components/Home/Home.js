@@ -18,7 +18,7 @@ class Home extends Component{
                 item_available:"33"
             },{
                 id:1,
-                item_img:"require(img/1/image.jpg)",
+                item_img:"./img/1/image.jpg",
                 item_mark:"ASUS",
                 item_model:"ROG STRIX B450-F GAMING",
                 item_price:"$ 129.99",
@@ -26,7 +26,7 @@ class Home extends Component{
                 item_available:"5"
             },{
                 id:2,
-                item_img:"require(img/2/image.jpg)",
+                item_img:"./img/2/image.jpg",
                 item_mark:"Crucial",
                 item_model:"CT1000P1SSD8",
                 item_price:"$ 119.99",
@@ -48,7 +48,9 @@ class Home extends Component{
             <Fragment>
             <div className="sale_items">
                 <h2>PC - Component's</h2>
-                <Item buy_cmd={this.printBuyMessage} buy_message= {this.state.buyMessage} sale_item={this.state.sale_item}/>
+                <Item buy_cmd={this.printBuyMessage} buy_message= {this.state.buyMessage} sale_item={this.state.sale_item[0]}/>
+                <Item buy_cmd={this.printBuyMessage} buy_message= {this.state.buyMessage} sale_item={this.state.sale_item[1]}/>
+                <Item buy_cmd={this.printBuyMessage} buy_message= {this.state.buyMessage} sale_item={this.state.sale_item[2]}/>
                 {/* Componente Item */}
             </div>
             </Fragment>
