@@ -6,7 +6,7 @@ class Item extends Component{
         super(props);
     }
     boughtItem = () =>{
-        this.props.sale_item.item_buyMessageAux = "Muchas gracias por su compra !!";
+        this.props.sale_item.item_buyMessageAux = "Muchas gracias por su compra !!!";
         this.props.buy_cmd(this.props.sale_item);
     };
     render(){

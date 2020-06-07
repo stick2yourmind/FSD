@@ -30,6 +30,12 @@ REV 2.3:
  React module:
       submodule 2 - exercise 2
       Added "Muchas gracias por su compra !!" message/function after buy an item
+      \n
+REV 2.4:
+ React module:
+      submodule 2 - exercise 2
+      [Home] component modified, now it updates its own sale_item element, inside sale_item array
+
 
 
 

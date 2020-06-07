@@ -7,7 +7,7 @@ class Home extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            item_bought_keyed :"",
+            item_bought :[],
             sale_item: [{
                 item_id:0,
                 item_img:"./img/0/image.jpg",
@@ -59,8 +59,13 @@ class Home extends Component{
         console.log(this.state);
         console.log("Usted ha comprado el item: ");
         console.log(item_bought.item_id);
+        let newSaleItemState = [];
+        for (let i=0; i<this.state.sale_item.length; i++){
+            newSaleItemState = newSaleItemState.concat(this.state.sale_item[i]);
+        }
+        newSaleItemState[item_bought.item_id] = item_bought;
         this.setState({
-            item_bought_keyed :item_bought
+            sale_item :newSaleItemState
         });
     };
     render(){
