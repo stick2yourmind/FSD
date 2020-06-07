@@ -26,6 +26,11 @@ REV 2.2:
  React module:
       submodule 2 - exercise 2
       React app working with img but API. With three items loaded with json
+REV 2.3:
+ React module:
+      submodule 2 - exercise 2
+      Added "Muchas gracias por su compra !!" message/function after buy an item
+
 
 
 
