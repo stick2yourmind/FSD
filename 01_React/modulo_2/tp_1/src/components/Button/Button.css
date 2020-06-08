@@ -1,0 +1,70 @@
+*{
+    box-sizing:border-box;margin:0;padding:0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+
+.table{
+    display:table;
+}
+.tr:nth-of-type(1){
+    display:table-row;
+    height:400px;
+}
+.tr{
+    display:table-row;
+    height:100px;
+}
+.td{
+    display:table-cell;
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    border-color: black;
+    text-align:center;
+    vertical-align: middle;
+    width:500px;
+    font-size: 13px;
+}
+.sale_items{
+    width: 100%;
+}
+.table{
+    margin: auto;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.div_form{
+    height: 70%;
+    width: 100%;
+}
+.buy_form{
+    display: inline-block;
+    height: 70%;
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+li:hover{
+    text-decoration: underline;
+}
+.buy_input{
+    display: block;
+    border-radius: 50px;
+    height: 30px;
+    background: black;
+    color: whitesmoke;
+    border-width: 0;
+    width: 75px;
+    margin: auto auto 5px auto;
+}
+.buy_input:hover{
+    font-weight: bold;
+}
+.buy_span{
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
