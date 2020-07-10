@@ -53,7 +53,7 @@ class Login extends Component {
         return (
             <Fragment>
             <section id="cont">
-                <h2>Contacto</h2>
+                <h2>Ingresar</h2>
                 <div id="formulario" onSubmit = {this.handleSubmit}>
                   <form >
                     <input className="entradaFormulario" type="email" placeholder="Email" name="email" required />

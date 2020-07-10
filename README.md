@@ -68,6 +68,13 @@ REV 3.2:
                + Login/Register's page + admin/users verification at login. User verification at register to avoid duplicated emails.
                - Page to add products
 
+REV 3.3:
+          React module 03: Using API and firebase
+               + Product gallery's page
+               + Product details's page
+               + Login/Register's page + admin/users verification at login. User verification at register to avoid duplicated emails.
+               + Page to add products
+
 
 
 

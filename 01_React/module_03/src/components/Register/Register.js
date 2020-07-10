@@ -47,13 +47,11 @@ class Register extends Component {
            userExists = true;
            });
         }).then( ()=>{
-           if(!userExists){
+           if(!userExists){ /* Adding to db new user */
                firebase.firestore().collection('Users').add(newUser)
            .then(doc=>{console.log(doc)})
            .catch(error=>{console.log(error)})
-                }
-                else{
-                    alert("Nuevo usuario ha sido ingresado")
+           alert("Nuevo usuario ha sido ingresado")
                 }
             })
 
@@ -68,7 +66,7 @@ class Register extends Component {
         return (
             <Fragment>
             <section id="cont">
-                <h2>Contacto</h2>
+                <h2>Registrarse</h2>
                 <div id="formulario" onSubmit = {this.handleSubmit}>
                   <form >
                     <input className="entradaFormulario" type="text" placeholder="Nombre" name="firstname" required/>
