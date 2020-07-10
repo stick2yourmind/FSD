@@ -98,3 +98,22 @@ header{
     border-inline-end: 0;
     outline: 0;
 }
+
+/* Push.html*/
+#cont h2 {
+    font-family: "letraCursiva";
+    text-align: center;
+    font-size: 40px;
+  }
+  #formulario {
+    width: 100%;
+    margin: 5px auto 0 auto;
+  }
+  .entradaFormulario {
+    display: block;
+    width: 100%;
+    height: 70px;
+    font-size: 25px;
+    border: 1px solid hsl(346, 68%, 22%);
+  }
+  

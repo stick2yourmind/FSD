@@ -42,10 +42,24 @@ REV 2.4:
       [Home] component modified, now it updates its own sale_item element, inside sale_item array
       Added "Muchas gracias por su compra !!" message/function after buy an item
       
-REV 3.0:
+REV 2.5:
  React module:
       submodule 2 - exercise 2
       API REST added, "ver detalle" button added
+
+REV 3.0:
+ React module 03: Using API
+     + Product gallery's page
+     + Product details's page
+     - Login/Register's page
+     - Product management's page
+
+REV 3.1:
+ React module 03: Using API and firebase
+     + Product gallery's page
+     + Product details's page
+     + Login/Register's page + admin/users verification at login
+     - Page to add products
 
 
 

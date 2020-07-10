@@ -24,15 +24,14 @@ class StoreProduct extends Component {
             });
         }
     }
-    renderRedirect = () => {
-        if (this.state.redirect) {
-            return <Redirect to={"/detalle/" + this.props.storeProduct.id} />
-        }
-      }
     render() {
         return (
             <Fragment>
-                {this.renderRedirect()}
+                
+                {/* Conditional rendering of Redirect component, it will only redirects if state.redirect is true*/
+                this.state.redirect && <Redirect to={"/detalle/" + this.props.storeProduct.id} />
+                }
+
                 <div className="storeProduct">
                     <div className="storeProductIMG">
                         <img src={this.props.storeProduct.item_img} alt={this.props.storeProduct.item_model} />

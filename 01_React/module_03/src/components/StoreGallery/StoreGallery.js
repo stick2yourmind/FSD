@@ -43,3 +43,12 @@ class Home extends Component {
     }
 }
 export default Home;
+
+/* 
+https://html5-css3-js-2020.000webhostapp.com/react/0/image.jpg 
+https://html5-css3-js-2020.000webhostapp.com/react/1/image.jpg
+https://html5-css3-js-2020.000webhostapp.com/react/2/image.jpg
+https://html5-css3-js-2020.000webhostapp.com/react/3/image.jpg
+https://html5-css3-js-2020.000webhostapp.com/react/4/image.jpg
+https://html5-css3-js-2020.000webhostapp.com/react/5/image.jpg
+*/
