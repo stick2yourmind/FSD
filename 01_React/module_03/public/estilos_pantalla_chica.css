@@ -1,0 +1,25 @@
+
+#headerMarca{
+    float: none;
+    width: 100%;
+}
+
+#headerNav {
+    float: none;
+    width: 100%;
+    text-align: center;
+}
+#cont{
+    padding: 16rem 1rem 1rem 1rem;
+}
+#headerNav ul li{
+    display: block;
+}
+.storeGallery{
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+}
+.storeProductIMG img{
+    width: 50%;
+    height: auto;
+    min-height: 0;
+}

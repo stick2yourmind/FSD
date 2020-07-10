@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+header{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    height: 4   rem;
+}
+#headerMarca{
+    width: 30%;
+    float: left;
+}
+#headerMarca a{
+    text-decoration: none;
+}
+#headerMarca a h1{
+    text-align: center;
+    font-size: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+}
+#headerNav {
+    float: right;
+}
+#headerNav ul{
+    list-style: none;
+}
+#headerNav ul li{
+    display: inline-block;
+    padding: 0 0.1rem;
+}
+#headerNav ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+#headerNav ul li a:hover{
+    text-decoration: underline;
+}
+#cont{
+    padding: 4rem 1rem 1rem 1rem;
+    clear: both;
+}
+#contTitle{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.storeGallery{
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+}
+.storeProduct{
+    font-size: 2rem;
+}
+.storeProductIMG{
+    text-align: center;
+}
+.storeProductIMG img{
+    width: 100%;
+    height: auto;
+    max-width: 45rem;
+    min-height: 47rem;
+    object-fit: contain;
+}
+.storeProductINFO{
+    text-align: center;
+    height: 13rem;
+    list-style-position: inside;
+}
+.buttonAndMSG{
+    text-align: center;
+    height: 6rem;
+}
+.buttonAndMSG button{
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    width: 8rem;
+    height: 3rem;
+    border-radius: 10rem;
+    border-block-start: 0;
+    border-block-end: 0;
+    border-inline-start: 0;
+    border-inline-end: 0;
+    outline: 0;
+}
