@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import StoreProduct from "../StoreProduct/StoreProduct"
+import firebase from '../../config/firebase';
 
 
 class Home extends Component {
@@ -11,18 +12,30 @@ class Home extends Component {
 
     }
     componentDidMount(){
-        fetch(`https://my-json-server.typicode.com/stick2yourmind/demo/sale_items_details`)
-            .then(response => response.json())
-            .then(data =>{
-                console.log("Data",data)
-                this.setState({
-                    storeGallery:data
-                });
-                console.log("state",this.state)
-            })
-            .catch(error => {
-                console.log(error);
+        let aux = [];
+        let index = 0;
+        function ArrayElements(element) {
+            aux[index] = {
+                id: element.id,
+                item_img:element.data().item_img,
+                item_mark:element.data().item_mark,
+                item_model:element.data().item_model,
+                item_price:element.data().item_price,
+                item_sku:element.data().item_sku,
+                item_available:element.data().item_available
+            }
+            index = index + 1;
+        }
+
+        firebase.firestore().collection("StoreProduct").get().then((querySnapshot) => {
+            querySnapshot.forEach((doc) => ArrayElements(doc));
+        }).then(() => {
+            this.setState({
+            storeGallery:aux
             });
+            console.log("state", this.state);
+            index = 0;
+            })
     }
 
     render() {

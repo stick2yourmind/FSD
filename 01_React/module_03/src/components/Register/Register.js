@@ -19,24 +19,7 @@ class Register extends Component {
             lastname : formNewUser.target.lastname.value,
             email : formNewUser.target.email.value.toLowerCase(),
             password : formNewUser.target.password.value
-        }
-        /* Getting password from an user email
-        firebase.firestore().collection("Users").where("email", "==", formNewUser.target.email.value)
-        .get()
-        .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-            // doc.data() is never undefined for query doc snapshots
-            console.log("password")
-            console.log(doc.id, " => ", doc.data().password);
-            });
-        })
-
-        Adding a user
-        firebase.firestore().collection('Users').add(newUser)
-        .then(doc=>{console.log(doc)})
-        .catch(error=>{console.log(error)})
-
-        */
+        }   
         /* Ckecking if email already exists at database to avoid duplication */
         let userExists = false;
         firebase.firestore().collection("Users").where("email", "==", newUser.email)

@@ -75,6 +75,13 @@ REV 3.3:
                + Login/Register's page + admin/users verification at login. User verification at register to avoid duplicated emails.
                + Page to add products
 
+REV 3.4:
+          React module 03: Using only firestore to save and load products. Users info are saved and fetched from firestore db. 
+               + Product gallery's page (main store)
+               + Product details's page
+               + Login/Register's page + admin/users verification at login. User verification at register to avoid duplicated emails.
+               + Page to add products
+
 
 
 

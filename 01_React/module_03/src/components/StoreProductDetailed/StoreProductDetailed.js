@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom'
+import firebase from '../../config/firebase';
 
 
 class StoreProductDetailed extends Component {
@@ -10,18 +10,21 @@ class StoreProductDetailed extends Component {
             }
     }
     componentDidMount(){
-        fetch(`https://my-json-server.typicode.com/stick2yourmind/demo/sale_items_details/${this.props.match.params.id}`)
-            .then(response => response.json())
-            .then(data =>{  
-                console.log("Data",data);
-                this.setState({
-                    storeProduct:data
-                });
-                console.log("state",this.state)
+        /* Fetching product from database */
+        firebase.firestore().collection("StoreProduct").doc(this.props.match.params.id).get()
+        .then((doc) => { this.setState({...this.state,
+            storeProduct:{ 
+                item_img:doc.data().item_img,
+                item_mark:doc.data().item_mark,
+                item_model:doc.data().item_model,
+                item_price:doc.data().item_price,
+                item_sku:doc.data().item_sku,
+                item_available:doc.data().item_available
+                }
             })
-            .catch(error => {
-                console.log(error);
-            });
+            console.log("state",this.state);
+        })
+        .catch((error) => { });
     }
     handleClick = (generator) => {
         if (generator === "BUTTON_BUY"){
