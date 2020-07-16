@@ -11,43 +11,27 @@ class Login extends Component {
         formLoginUserAdmin.preventDefault();
         console.log(formLoginUserAdmin.target.email.value);
         console.log(formLoginUserAdmin.target.password.value);
-        let type = undefined;
-        /* Creating JSON with user data */ 
         const LoginUserAdmin = {
             email : formLoginUserAdmin.target.email.value.toLowerCase(),
             password : formLoginUserAdmin.target.password.value
         }
-        /* Checkikg if user exists */
-        firebase.firestore().collection("Users").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                if((doc.data().email === LoginUserAdmin.email) && (doc.data().password === LoginUserAdmin.password)){
-                    type = "User";
-                    console.log("Usuario registrado");
-                    }
-            });
+        firebase.auth().signInWithEmailAndPassword(LoginUserAdmin.email, LoginUserAdmin.password)
+        .then(()=>{
+            alert("Usuario verificado, bienvenido!");
+            let user = firebase.auth().currentUser;
+            let userName;
+            if (user != null) {
+                userName = user.displayName.split("+");
+                console.log("Nombre: ", userName[0], "Apellido: ", userName[1]);
+              }
+        })
+        .catch((error)=>{
+            alert(error);
         });
-        /* Checkikg if admin exists */
-        firebase.firestore().collection("Admin").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                if((doc.data().email === LoginUserAdmin.email) && (doc.data().password === LoginUserAdmin.password)){
-                    type = "Admin"
-                    console.log("Admin registrado");
-                    }
-            });
-        }).then(() => { /* Advice to user/admin if is registered */ 
-            if((type==="User") || (type==="Admin")){
-                alert(type + " registrado");
-            }
-            else{
-                alert("Usuario no registrado");
-            }
-
-        });
-
-
+   
         /* Cleaning form */
-        formLoginUserAdmin.target.email.value = ""
-        formLoginUserAdmin.target.password.value = ""
+        formLoginUserAdmin.target.email.value = "";
+        formLoginUserAdmin.target.password.value = "";
     }
     render() {
         return (

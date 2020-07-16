@@ -19,31 +19,25 @@ class Register extends Component {
             lastname : formNewUser.target.lastname.value,
             email : formNewUser.target.email.value.toLowerCase(),
             password : formNewUser.target.password.value
-        }   
-        /* Ckecking if email already exists at database to avoid duplication */
-        let userExists = false;
-        firebase.firestore().collection("Users").where("email", "==", newUser.email)
-        .get()
-        .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-           alert("Usuario ya existente, ingrese otro email")
-           userExists = true;
-           });
-        }).then( ()=>{
-           if(!userExists){ /* Adding to db new user */
-               firebase.firestore().collection('Users').add(newUser)
-           .then(doc=>{console.log(doc)})
-           .catch(error=>{console.log(error)})
-           alert("Nuevo usuario ha sido ingresado")
-                }
+        }
+        
+        firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password).
+        then(()=>{
+            alert("Usuario Registrado");
+            firebase.auth().currentUser.updateProfile(
+                {displayName: newUser.firstname +"+"+newUser.lastname}
+                )
             })
-
+            .catch((error)=>{
+                alert("Error");
+                console.log(error);
+            });
         
         /* Cleaning form */
-        formNewUser.target.firstname.value = ""
-        formNewUser.target.lastname.value = ""
-        formNewUser.target.email.value = ""
-        formNewUser.target.password.value = ""
+        formNewUser.target.firstname.value = "";
+        formNewUser.target.lastname.value = "";
+        formNewUser.target.email.value = "";
+        formNewUser.target.password.value = "";
     }
     render() {
         return (
