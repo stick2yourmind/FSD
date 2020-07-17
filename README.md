@@ -89,6 +89,10 @@ REV 3.5:
                + Login/Register's page + users by using firebase.auth().
                + Page to add products.
 
+REV. 3.6:
+          React module 03: Using only firestore to save and load products. Users info are saved and fetched from firestore db. 
+               + Fix reponsive design that unables to see h2 in every page
+
 
 
 
