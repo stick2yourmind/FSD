@@ -93,6 +93,10 @@ REV. 3.6:
           React module 03: Using only firestore to save and load products. Users info are saved and fetched from firestore db. 
                + Fix reponsive design that unables to see h2 in every page
 
+REV. 3.7:
+          React module 03: Using only firestore to save and load products. Users info are saved and fetched from firestore db. 
+               + Context added to manage user/admin states.
+
 
 
 

@@ -43,24 +43,31 @@ class StoreProductDetailed extends Component {
     render() {
         return (
             <Fragment>
-                <div className="storeProduct">
-                    <div className="storeProductIMG">
-                        <img src={this.state.storeProduct.item_img} alt={this.state.storeProduct.item_model} />
-                    </div>
-                    <div className="storeProductINFO">
-                    <ul>
-                        <li className="storeProductMark">Marca: {this.state.storeProduct.item_mark}</li>
-                        <li className="storeProductModel">Descripción: modelo {this.state.storeProduct.item_model}</li>
-                        <li className="storeProductPrice">Precio: {this.state.storeProduct.item_price}</li>
-                        <li className="storeProductSKU">SKU: {this.state.storeProduct.item_sku}</li>
-                        <li className="storeProductAvailable">Cantidad disponible: {this.state.storeProduct.item_available}</li>
-                    </ul>
-                    </div>
-                    <div className="buttonAndMSG">                    
-                        <button type="buttonBuy" onClick={ ()=>this.handleClick("BUTTON_BUY")} >Comprar</button>
-                        <p>{this.state.buttonMSG}</p>
-                    </div>
-                </div>      
+            <section id="cont">
+                <div id="contTitle">
+                    <h2>{this.state.storeProduct.item_model}</h2>
+                </div>  
+                <div className="storeGallery">
+                    <div className="storeProduct">
+                        <div className="storeProductIMG">
+                            <img src={this.state.storeProduct.item_img} alt={this.state.storeProduct.item_model} />
+                        </div>
+                        <div className="storeProductINFO">
+                        <ul>
+                            <li className="storeProductMark">Marca: {this.state.storeProduct.item_mark}</li>
+                            <li className="storeProductModel">Descripción: modelo {this.state.storeProduct.item_model}</li>
+                            <li className="storeProductPrice">Precio: {this.state.storeProduct.item_price}</li>
+                            <li className="storeProductSKU">SKU: {this.state.storeProduct.item_sku}</li>
+                            <li className="storeProductAvailable">Cantidad disponible: {this.state.storeProduct.item_available}</li>
+                        </ul>
+                        </div>
+                        <div className="buttonAndMSG">                    
+                            <button type="buttonBuy" onClick={ ()=>this.handleClick("BUTTON_BUY")} >Comprar</button>
+                            <p>{this.state.buttonMSG}</p>
+                        </div>
+                    </div>   
+                </div>       
+                </section>      
             </Fragment>
         )
     }

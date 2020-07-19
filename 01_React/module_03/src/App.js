@@ -7,18 +7,23 @@ import StoreProductDetailed from "./components/StoreProductDetailed/StoreProduct
 import Register from "./components/Register/Register"
 import Login from "./components/Login/Login"
 import pushStoreProduct from './components/pushStoreProduct/pushStoreProduct'
+import GlobalState from './GlobalState/GlobalState'
 
 function App() {
   const [internalPage, setInternalPage] = useState({
-    links: [{ name: 'Tienda', path: '/' }, { name: 'Ingresar', path: '/login' }, { name: 'Registrarse', path: '/register' }, { name: 'Alta de productos', path: '/push' }]
+    linksLoggedIn: [{ name: 'Tienda', path: '/' }],
+    linksLoggedOut: [{ name: 'Tienda', path: '/' }, { name: 'Ingresar', path: '/login' }, 
+      { name: 'Registrarse', path: '/register' }],
+    linksLoggedInAdmin: [{ name: 'Alta de productos', path: '/push' }]
   })
 
   const headerH1 = "stk2"
   
   return (
-    <Fragment>
+    <GlobalState>
       <BrowserRouter>
-        <MainHeader headerH1={headerH1} internalPage={internalPage.links}/>
+        <MainHeader headerH1={headerH1} linksLoggedIn={internalPage.linksLoggedIn} 
+          linksLoggedOut={internalPage.linksLoggedOut} linksLoggedInAdmin={internalPage.linksLoggedInAdmin}  />
         <Route path='/' exact component={StoreGallery} />
         <Route path='/home' exact component={StoreGallery} />
         <Route path='/index' exact component={StoreGallery} />
@@ -27,7 +32,7 @@ function App() {
         <Route path='/register' exact component={Register} />
         <Route path='/push' exact component={pushStoreProduct} />
       </BrowserRouter>
-    </Fragment>
+    </GlobalState> 
   );
 }
 

@@ -29,7 +29,7 @@ class Register extends Component {
                 )
             })
             .catch((error)=>{
-                alert("Error");
+                alert(error);
                 console.log(error);
             });
         

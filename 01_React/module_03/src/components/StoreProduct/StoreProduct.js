@@ -1,8 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Redirect } from 'react-router-dom'
+import GlobalContext from '../../GlobalState/GlobalContext';
 
 
 class StoreProduct extends Component {
+    static contextType = GlobalContext;
     constructor(props) {
         super(props);
         this.state = { buttonMSG: "",
@@ -31,7 +33,7 @@ class StoreProduct extends Component {
                 {/* Conditional rendering of Redirect component, it will only redirects if state.redirect is true*/
                 this.state.redirect && <Redirect to={"/detalle/" + this.props.storeProduct.id} />
                 }
-
+                
                 <div className="storeProduct">
                     <div className="storeProductIMG">
                         <img src={this.props.storeProduct.item_img} alt={this.props.storeProduct.item_model} />

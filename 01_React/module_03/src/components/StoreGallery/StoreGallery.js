@@ -42,7 +42,8 @@ class Home extends Component {
         return (
             <Fragment>
                 <section id="cont">
-                    <div id="contTitle"><h2>Productos</h2>
+                    <div id="contTitle">
+                        <h2>Productos</h2>
                     </div>  
                     <div className="storeGallery">
                         
