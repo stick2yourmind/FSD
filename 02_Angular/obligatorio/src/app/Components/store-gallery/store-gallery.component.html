@@ -2,9 +2,9 @@
     <div id="contTitle">
         <h2>Productos</h2>
     </div>  
-    <div class="storeGallery" *ngFor="let StoreProduct of StoreProducts">
+    <div class="storeGallery" >
         <!-- store product-->
-        <app-store-product [StoreProduct]="StoreProduct"></app-store-product>
+        <app-store-product *ngFor="let StoreProduct of StoreProducts" [StoreProduct]="StoreProduct"></app-store-product>
 
     </div>
 </section>     

@@ -11,6 +11,7 @@ import { StoreGalleryComponent } from './Components/store-gallery/store-gallery.
 import { StoreProductComponent } from './Components/store-product/store-product.component';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
+import { StoreProductDetailedComponent } from './Components/store-product-detailed/store-product-detailed.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { environment } from '../environments/environment';
     LoginComponent,
     RegisterComponent,
     StoreGalleryComponent,
-    StoreProductComponent
+    StoreProductComponent,
+    StoreProductDetailedComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { modelStoreProduct } from '../../models/storeProduct/storeProduct'
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-store-product',
@@ -9,17 +11,19 @@ import { modelStoreProduct } from '../../models/storeProduct/storeProduct'
 export class StoreProductComponent implements OnInit {
   @Input() StoreProduct: modelStoreProduct;
   public buttonMSG: string;
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
   clickCompra(): void {
     this.buttonMSG = "Muchas gracias por su compra!!"
-    console.log("buttonMSG",  this.buttonMSG);  
+    console.log("[StoreProductComponent] buttonMSG",  this.buttonMSG);  
   }
 
-  clickDetalle(): void {
+  clickDetalle(item_document_id): void {
     this.buttonMSG = "Ver mas detalles!!"
+    console.log("[StoreProductComponent] item_document_id: ", item_document_id);      
+    this.router.navigateByUrl("/detalle/" + item_document_id);
   }
 }

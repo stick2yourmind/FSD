@@ -97,6 +97,12 @@ REV. 3.7:
           React module 03: Using only firestore to save and load products. Users info are saved and fetched from firestore db. 
                + Context added to manage user/admin states.
 
+REV. 3.8:
+          Angular obligatorio: Auth pending.
+
+REV. 3.9:
+          Angular obligatorio: Auth added. Next version may use Redux.
+
 
 
 

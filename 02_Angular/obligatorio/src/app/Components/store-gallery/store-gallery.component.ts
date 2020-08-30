@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { FirestoreService } from '../../services/firestore.service';
 import { modelStoreProduct } from '../../models/storeProduct/storeProduct'
 
@@ -16,8 +17,8 @@ export class StoreGalleryComponent implements OnInit {
     this.firestoreService.getAllStoreProduct().subscribe((StoreProductsSnapshot) => {
       this.StoreProducts = [];
       StoreProductsSnapshot.forEach((StoreProductData: any) => {
-        console.log("StoreProductData.payload.doc.data(): ", StoreProductData.payload.doc.data());
         this.StoreProducts.push({
+          item_document_id: StoreProductData.payload.doc.id,
           item_available: StoreProductData.payload.doc.data().item_available,
           item_img: StoreProductData.payload.doc.data().item_img,
           item_mark: StoreProductData.payload.doc.data().item_mark,
@@ -26,6 +27,7 @@ export class StoreGalleryComponent implements OnInit {
           item_sku: StoreProductData.payload.doc.data().item_sku,
         });
       });
+      console.log("[StoreGalleryComponent] StoreProducts: ", this.StoreProducts);
     });
     
   }

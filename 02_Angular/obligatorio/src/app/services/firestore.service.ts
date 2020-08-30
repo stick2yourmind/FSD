@@ -17,7 +17,8 @@ export class FirestoreService {
 
 
   public getStoreProduct(documentId: string) {
-    return this.firestore.collection('StoreProduct').doc(documentId).snapshotChanges();
+    /*return this.firestore.collection('StoreProduct').doc(documentId).snapshotChanges();*/
+    return this.firestore.collection('StoreProduct').doc(documentId).get();
   }
 
   public getAllStoreProduct() {
