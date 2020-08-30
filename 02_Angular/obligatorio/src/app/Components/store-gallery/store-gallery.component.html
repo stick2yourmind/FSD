@@ -1,0 +1,10 @@
+<section id="cont">
+    <div id="contTitle">
+        <h2>Productos</h2>
+    </div>  
+    <div class="storeGallery" *ngFor="let StoreProduct of StoreProducts">
+        <!-- store product-->
+        <app-store-product [StoreProduct]="StoreProduct"></app-store-product>
+
+    </div>
+</section>     

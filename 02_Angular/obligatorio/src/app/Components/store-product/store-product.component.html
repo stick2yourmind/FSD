@@ -1,0 +1,18 @@
+<div class="storeProduct">
+    <div class="storeProductIMG">
+        <img src="{{StoreProduct.item_img}}" alt="{{StoreProduct.item_model}}" />
+    </div>
+    <div class="storeProductINFO">
+    <ul>
+        <li class="storeProductMark">Marca: {{StoreProduct.item_mark}}</li>
+        <li class="storeProductModel">Descripción: modelo {{StoreProduct.item_model}}</li>
+        <li class="storeProductPrice">Precio: {{StoreProduct.item_price}}</li>
+        <li class="storeProductSKU">SKU: {{StoreProduct.item_sku}}</li>
+    </ul>
+    </div>
+    <div class="buttonAndMSG">                    
+        <button type="buttonBuy" (click)="clickCompra()" >Comprar</button>
+        <button type="buttonDetails" (click)="clickDetalle()" > Ver detalle</button>
+        <p>{{buttonMSG}}</p>
+    </div>
+</div>  

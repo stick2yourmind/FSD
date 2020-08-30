@@ -1,0 +1,13 @@
+#cont{
+    padding: 4rem 1rem 1rem 1rem;
+    clear: both;
+}
+#contTitle{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.storeGallery{
+    display: grid;
+    grid-gap: 5%;
+    grid-template-columns: repeat(auto-fit, minmax(45rem, 1fr));
+}

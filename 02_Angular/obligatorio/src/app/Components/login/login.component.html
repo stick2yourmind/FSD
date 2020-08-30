@@ -1,0 +1,14 @@
+<section id="cont">
+    <h2>Ingresar</h2>
+    <div id="formulario" >
+      <form [formGroup]="loginForm" (ngSubmit)="handleSubmit()">
+        <input class="entradaFormulario" type="email" placeholder="Email" name="email" formControlName="email" />
+        <input class="entradaFormulario" type="password" placeholder="Contraseña" name="password" formControlName="password" />
+        <input class="entradaFormulario" type="submit" value="Enviar" [disabled]="loginForm.invalid"/>
+      </form>
+    </div>
+    <h3>Alta de productos solo habilitada para el administrador. email: admin@zeus.com contraseña: 12345678</h3>
+    <h3 class="error" *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').dirty">El email es obligatorio</h3>
+    <h3 class="error" *ngIf="loginForm.get('email').hasError('email') && loginForm.get('email').dirty">El email no tiene formato válido</h3>
+    <h3 class="error" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').dirty">La contraseña es obligatoria</h3>
+</section>   

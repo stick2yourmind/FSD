@@ -1,0 +1,19 @@
+<section id="cont">
+    <h2>Registrarse</h2>
+    <div id="formulario" >
+      <form [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+        <input class="entradaFormulario" type="text" placeholder="Nombre" name="nombre" formControlName="nombre" />
+        <input class="entradaFormulario" type="text" placeholder="Apellido" name="apellido"  formControlName="apellido" />
+        <input class="entradaFormulario" type="email" placeholder="Email" name="email" formControlName="email" />
+        <input class="entradaFormulario" type="password" placeholder="Contraseña" name="password" formControlName="password" />
+        <input class="entradaFormulario" type="submit" value="Enviar" [disabled]="registerForm.invalid"/>
+      </form>
+    </div>
+    <h3 class="error" *ngIf="registerForm.get('nombre').hasError('required') && registerForm.get('nombre').dirty">El nombre es obligatorio</h3>
+    <h3 class="error" *ngIf="registerForm.get('apellido').hasError('required') && registerForm.get('apellido').dirty">El apellido es obligatorio</h3>
+    <h3 class="error" *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').dirty">El email es obligatorio</h3>
+    <h3 class="error" *ngIf="registerForm.get('email').hasError('email') && registerForm.get('email').dirty">El email no tiene formato válido</h3>
+    <h3 class="error" *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').dirty">La contraseña es obligatoria</h3>
+    <h3 class="error" *ngIf="registerForm.get('password').hasError('minlength') && registerForm.get('password').dirty">La contraseña debe tener mínimo 8 caracteres</h3>
+    <h3 class="error" *ngIf="registerForm.get('password').hasError('maxlength') && registerForm.get('password').dirty">La contraseña debe tener máximo 14 caracteres</h3>
+</section>   

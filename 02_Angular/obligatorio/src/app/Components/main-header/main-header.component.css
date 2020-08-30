@@ -1,0 +1,42 @@
+
+header{
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    padding: 0 1rem 0 1rem;
+    height: 4   rem;
+}
+#headerMarca{
+    width: 30%;
+    float: left;
+}
+#headerMarca h1 a{
+    text-decoration: none;
+    text-align: center;
+    font-size: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    color: whitesmoke;
+    font-family: 'Righteous', cursive;
+}
+#headerNav {
+    float: right;
+}
+#headerNav ul{
+    list-style: none;
+}
+#headerNav ul li{
+    display: inline-block;
+    padding: 0 0.1rem;
+}
+#headerNav ul li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+    height: 4rem;
+    line-height: 4rem;
+}
+#headerNav ul li a:hover{
+    text-decoration: underline;
+}
