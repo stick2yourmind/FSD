@@ -103,6 +103,11 @@ REV. 3.8:
 REV. 3.9:
           Angular obligatorio: Auth added. Next version may use Redux.
 
+Step 40:
+        NodeJs: 
+               Products' routes, model and controller have been created (getByModel using regex).
+               getAll, getByID, getByModel, create, update, delete.
+
 
 
 
